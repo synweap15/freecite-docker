@@ -8,8 +8,7 @@ ENV LC_ALL C.UTF-8
 WORKDIR /myapp/src
 ADD src/CRF++-0.58.tar.gz CRF++-0.58
 ADD src/install_crfpp.sh install_crfpp.sh
-
-RUN /bin/bash -c "/myapp/src/install_crfpp.sh"
+RUN bash install_crfpp.sh
 
 ADD . /myapp
 WORKDIR /myapp
